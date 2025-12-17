@@ -74,7 +74,7 @@ st.caption("Primeiras linhas da base de dados carregada.")
 st.dataframe(df_filtro.head(), use_container_width=True)
 
 st.header("2. Estatística Descritiva")
-st.markdown("Observe o **CV (%)** para analisar volatilidade e a **Skewness** para assimetria.")
+st.markdown("Observe o **CV (%)** para analisar volatilidade e a **Distorção** para assimetria.")
 st.dataframe(estatistica_descritiva(df_filtro), use_container_width=True)
 
 col_desc1, col_desc2 = st.columns(2)
