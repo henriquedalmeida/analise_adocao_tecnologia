@@ -59,7 +59,7 @@ df_filtro = df[
 ]
 
 st.title("📊 Análise Estatística: Adoção de Tecnologias (2023-2025)")
-st.markdown("*Dashboard interativo para suporte à apresentação de Probabilidade e Estatística.*")
+st.markdown("*Dashboard interativo para suporte à apresentação de Probabilidade e Estatística - (2025.2).*")
 
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 kpi1.metric("Adoção Média", f"{df_filtro['Taxa_Adocao_Percent'].mean():.2f}%", help="Percentual médio de empresas que adotaram a tecnologia")
