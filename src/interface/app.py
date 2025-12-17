@@ -59,13 +59,13 @@ df_filtro = df[
 ]
 
 st.title("📊 Análise Estatística: Adoção de Tecnologias (2023-2025)")
-st.markdown("*Dashboard interativo para suporte à apresentação de Estatística e Probabilidade.*")
+st.markdown("*Dashboard interativo para suporte à apresentação de Probabilidade e Estatística.*")
 
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
-kpi1.metric("Adoção Média", f"{df_filtro['Taxa_Adocao_Percent'].mean():.2f}%")
-kpi2.metric("Investimento Médio", f"R$ {df_filtro['Investimento_Milhoes'].mean():.2f} Mi")
-kpi3.metric("Satisfação Média", f"{df_filtro['Satisfacao_Media'].mean():.2f}")
-kpi4.metric("Tempo Implementação", f"{df_filtro['Tempo_Implementacao_Meses'].mean():.2f} Meses")
+kpi1.metric("Adoção Média", f"{df_filtro['Taxa_Adocao_Percent'].mean():.2f}%", help="Percentual médio de empresas que adotaram a tecnologia")
+kpi2.metric("Investimento Médio", f"R$ {df_filtro['Investimento_Milhoes'].mean():.2f} Mi", help="Investimento médio em milhões para implementação da tecnologia")
+kpi3.metric("Satisfação Média", f"{df_filtro['Satisfacao_Media'].mean():.2f}", help="Nível médio de satisfação dos usuários (escala 0-10)")
+kpi4.metric("Tempo Implementação", f"{df_filtro['Tempo_Implementacao_Meses'].mean():.2f} Meses", help="Tempo médio em meses para implementação completa da tecnologia")
 
 st.subheader("Classificação das Variáveis")
 st.markdown("""
